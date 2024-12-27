@@ -9,7 +9,7 @@
   padding: 0;
 }
 .hero {
-  background-image: url("./assets/images/desktop/hero-bg.jpg");
+  background-image: url("./src/assets/images/desktop/hero-bg.jpg");
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
