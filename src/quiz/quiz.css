@@ -1,0 +1,251 @@
+:root {
+    --primary-color: rgb(34, 94, 223);
+    --secondary-color: rgb(253, 251, 251);
+    --green-color: rgb(107, 227, 107);
+    --purple-color: rgb(131, 42, 131);
+    --gray-text: rgb(100, 96, 96);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  .quiz-section {
+    position: relative;
+   }
+  
+  .quiz-header {
+    background: linear-gradient(
+      to right,
+      var(--secondary-color),
+      var(--primary-color),
+      var(--secondary-color)
+    );
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--secondary-color);
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: lighter;
+  }
+  
+  .inner-heading {
+    font-weight: 800;
+  }
+
+  .timmer-heading {
+    margin-top: 3rem;
+    color: var(--gray-text);
+  }
+  
+  .quiz-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+  }
+  
+  .timmer-container {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background: conic-gradient(
+      var(--primary-color) 0%,
+      var(--green-color) 25%,
+      var(--purple-color) 50%,
+      var(--primary-color) 100%
+    );
+    /* animation: spin 3s linear infinite;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rgba(34, 94, 223, 0.5);
+    top: 40%;
+    right: 15%;
+  }
+  
+  .timmer-inner {
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    background-color: white; /* Inner static area */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Ensures it stays above the rotating border */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Optional subtle shadow */
+  }
+  
+  .timmer {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white; /* Static white text */
+    z-index: 2; /* Ensures it stays above the inner circle */
+  }
+  
+  /* Keyframe for rotating circular border */
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .quiz-container{
+    width: 50%;
+    margin: auto;
+   }
+  
+  .quiz-container-start {
+    display: flex;
+  }
+
+  .question-text{
+    margin: 2rem;
+   }
+  
+  
+  .btn-presentation {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 20px;
+    padding: 10px 15px;
+    border: none;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: 0.4s ease;
+  }
+  
+  .btn-presentation:hover {
+    transform: scale(1.08);
+  }
+  
+  .timeline {
+    width: 300px;
+    height: 1rem;
+    background-color: #e0e0e0;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 3rem;
+  }
+  
+  .timeline_inner {
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      var(--purple-color),
+      var(--primary-color),
+      var(--green-color)
+    );
+    width: 0;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .quiz-header {
+      font-size: 1.2rem;
+      height: 20vh;
+      padding: 10px;
+    }
+  
+    .quiz-body {
+      width: 90%;
+    }
+  
+    .timmer-container {
+      width: 6rem;
+      height: 6rem;
+    }
+  
+    .timmer {
+      font-size: 2rem;
+    }
+  
+    .btn-presentation {
+      font-size: 0.9rem;
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .quiz-header {
+      font-size: 1rem;
+      padding: 5px;
+    }
+  
+    .timmer-container {
+      width: 4rem;
+      height: 4rem;
+    }
+  
+    .timmer {
+      font-size: 1.5rem;
+    }
+  
+    .btn-presentation {
+      font-size: 0.8rem;
+      padding: 8px 10px;
+    }
+  }
+  
+
+.btn {
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    padding: 1rem;
+    margin: 1.5rem;
+    border: 1px solid var(--primary-color); 
+    cursor: pointer;  
+}
+.btn:hover {
+    transform: scale(1.08);
+}
+
+.option-element {
+    border: 2px solid var(--gray-text);
+    color: var(--gray-text);
+    border-radius: 1.5rem;
+    padding: 7px;
+    margin-top: 7px;
+    cursor: pointer;
+}
+
+.option-active {
+    background: rgb(4, 236, 236);
+    color: white;
+    border: 2px solid rgb(4, 236, 236);
+     border-radius: 1.5rem;
+    padding: 7px;
+    margin-top: 7px;
+    cursor: pointer;
+}
+
+.quiz-heading {
+    margin: 2rem;
+}
+
+.para {
+    padding: 2px;
+}
