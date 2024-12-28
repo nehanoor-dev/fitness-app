@@ -75,6 +75,8 @@
     box-shadow: 0 0 20px rgba(34, 94, 223, 0.5);
     top: 40%;
     right: 15%;
+    padding: auto;
+    width: 100%;
   }
   
   .timmer-inner {
@@ -157,7 +159,7 @@
       var(--primary-color),
       var(--green-color)
     );
-    width: 0;
+    width: 100%;
     transition: width 0.3s ease-in-out;
   }
   
@@ -195,8 +197,9 @@
     }
   
     .timmer-container {
-      width: 4rem;
-      height: 4rem;
+      width: 6rem;
+      height: 6rem;
+      right: 20%;
     }
   
     .timmer {
