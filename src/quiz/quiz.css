@@ -75,9 +75,7 @@
     box-shadow: 0 0 20px rgba(34, 94, 223, 0.5);
     top: 40%;
     right: 15%;
-    padding: auto;
-    width: 100%;
-  }
+   }
   
   .timmer-inner {
     position: absolute;
@@ -211,8 +209,8 @@
       padding: 8px 10px;
     }
     .quiz-container {
-      width: 100%;
-    }
+      width: 95%;
+     }
   }
   
 
