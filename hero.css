@@ -99,10 +99,10 @@
     opacity: 0.8;
   }
 
-  .sponser-img {
+  /* .sponser-img {
     margin-left: 2rem;
 
-  }
+  } */
 
   .hero-text-lg {
     display: block;
@@ -152,6 +152,10 @@
       gap: 10px;
       z-index: 2;
       width: 17rem;
+    }
+
+    .overlay {
+      display: none;
     }
   
     .hero-btn {
